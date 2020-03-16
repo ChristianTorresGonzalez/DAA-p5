@@ -26,9 +26,12 @@ class Polinomio_
         Monomio_ get_monomio(int );
 
         void copiar_polinomio(Polinomio_ &);
+        void copiar_polinomio(Polinomio_ & , int , int );
+
+        bool caso_minimo(Polinomio_ );
 
         Polinomio_ algoritmo_clasico(Polinomio_ &);
-        Polinomio_ algoritmo_DyV(Polinomio_ & );
+        Polinomio_ algoritmo_DyV(Polinomio_ & , Polinomio_ & );
 
         Polinomio_ operator +(Polinomio_ & );
         Polinomio_ operator *(Polinomio_ & );
