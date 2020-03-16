@@ -1,8 +1,9 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "shell",
-            "label": "g++.exe build active file",
+            "label": "build",
             "command": "C:\\cygwin64\\bin\\g++.exe",
             "args": [
                 "-g",
@@ -15,5 +16,4 @@
             }
         }
     ],
-    "version": "2.0.0"
 }

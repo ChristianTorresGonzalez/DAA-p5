@@ -37,20 +37,27 @@
         exponente = expo;
     }
 
-    Monomio_ Monomio_::operator + (Monomio_ otro_monomio)
+    Monomio_ Monomio_::operator +(Monomio_ otro_monomio)
+    {
+        Monomio_ auxiliar;
+        auxiliar.set_coeficiente(this -> coeficiente + otro_monomio.get_coeficiente());
+        auxiliar.set_exponente(this -> exponente);
+        return auxiliar;
+    }
+
+    Monomio_ Monomio_::operator -(Monomio_ otro_monomio)
     {
         assert (this -> exponente == otro_monomio.get_exponente());
             Monomio_ auxiliar;
-            auxiliar.set_coeficiente(this -> coeficiente + otro_monomio.get_coeficiente());
+            auxiliar.set_coeficiente(this -> coeficiente - otro_monomio.get_coeficiente());
             auxiliar.set_exponente(this -> exponente);
             return auxiliar;
-        
     }
 
     Monomio_ Monomio_::operator * (Monomio_ otro_monomio)
     {
             Monomio_ auxiliar;
-            auxiliar.set_coeficiente(this -> coeficiente * otro_monomio.get_coeficiente());
+            auxiliar.set_coeficiente(coeficiente * otro_monomio.get_coeficiente());
             auxiliar.set_exponente(this -> exponente + otro_monomio.get_exponente());
             return auxiliar;
         
@@ -61,13 +68,7 @@
         if (monomio.get_exponente() > 0)
             sout << monomio.get_coeficiente() << "x^" << monomio.get_exponente() << " + ";
         else
-            sout << monomio.get_coeficiente() << endl;
+            sout << monomio.get_coeficiente();
         
         return sout;
     }
-    
-
-    // istream& Monomio_::operator >>(istream &sin)
-    // {
-    //     sin >> this -> set;
-    // }

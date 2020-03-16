@@ -24,8 +24,8 @@ class Monomio_
         void set_exponente(int );
 
         Monomio_ operator +(Monomio_);
+        Monomio_ operator -(Monomio_);
         Monomio_ operator *(Monomio_);
 
         friend ostream& operator <<(ostream& sout, const Monomio_ );      
-        // void operator >>(istream &sin);
 };
