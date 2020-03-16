@@ -7,7 +7,7 @@ using namespace std;
 
 int main(void)
 {
-    // srand(time(NULL));
+    srand(time(NULL));
 
     // Monomio_ monomio1(5, 2);
     // cout << monomio1;
@@ -23,14 +23,11 @@ int main(void)
     // cout << suma.get_coeficiente() << "x^" << suma.get_exponente();
     // suma << (cout);
 
-    Polinomio_ polinomio1(1);
-    Polinomio_ polinomio2(1);
-    // polinomio1 + polinomio2;
-    // cout << polinomio1;
-    // cout << polinomio2;
-    // cout << polinomio1.get_monomio(0) + polinomio2.get_monomio(0);
-    // Polinomio_ resultado;
+    Polinomio_ polinomio1(4);
+    Polinomio_ polinomio2(4);
+    
+    cout << polinomio1;
+    cout << polinomio2;
+    
     polinomio1 * polinomio2;
-    // cout << "Holaaa" << resultado;
-    // cout << resultado;
 }
