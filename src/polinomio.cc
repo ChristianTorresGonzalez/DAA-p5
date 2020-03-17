@@ -107,6 +107,7 @@
             
             centro = (otro_polinomio.get_polinomio().size() == 2 ? 0 : (otro_polinomio.get_polinomio().size() / 2));
             otro_polinomio_izquierda.copiar_polinomio(otro_polinomio, 0, centro);
+
             otro_polinomio_derecha.copiar_polinomio_derecho(otro_polinomio, centro + 1, otro_polinomio.get_polinomio().size() - 1);
 
             if (polinomio_derecha.get_polinomio().size() != polinomio_izquierda.get_polinomio().size())
@@ -114,6 +115,7 @@
                 Monomio_ blanco(0, polinomio_derecha.polinomio[0].get_exponente() + 1);
                 polinomio_derecha.polinomio.insert(polinomio_derecha.polinomio.begin(), blanco) ;
             }
+
             otro_polinomio_izquierda.modificar_exponente(centro);
             if (otro_polinomio_derecha.get_polinomio().size() != otro_polinomio_izquierda.get_polinomio().size())
             {
@@ -253,7 +255,7 @@
         chrono::duration<float,milli> duration1 = end1 - start1;
 
         auto start = chrono::system_clock::now();
-        algoritmo_DyV(*this, otro_polinomio, resultado);
+            algoritmo_DyV(*this, otro_polinomio, resultado);
         auto end = chrono::system_clock::now();
         chrono::duration<float,milli> duration = end - start;
         cout << endl << "Tiempo transcurrido con filas-columnas: " << duration1.count() << endl;
